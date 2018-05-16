@@ -1,12 +1,12 @@
 {
-  "name": "seyyahtur_elitema",
+  "name": "SymfonyGulpSkeleton",
   "version": "1.0.0",
-  "description": "elitema nın temasına eklenecek stilleri içermek için oluşturuldu.",
+  "description": "",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Hamza Taşcı",
+  "author": "hmztsc",
   "license": "ISC",
   "devDependencies": {
     "gulp": "^3.9.1",
