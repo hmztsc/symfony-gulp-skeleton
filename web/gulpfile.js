@@ -15,19 +15,19 @@ gulp.task('browser-sync', function() {
 });
 
 gulp.task('sass', function () {
-    return gulp.src('web/sass/*.scss')
+    return gulp.src('sass/*.scss')
         //.pipe(sourcemaps.init())
         .pipe(sass({outputStyle: 'compressed'}))
         //.pipe(sourcemaps.write())
-        .pipe(gulp.dest('web/css'))
+        .pipe(gulp.dest('css'))
         .pipe(reload({stream:true}));
 });
 
 gulp.task('watch', ['browser-sync'], function () {
-    gulp.watch("web/**/*.scss",['sass']);
-    gulp.watch("web/js/*.js").on('change', browserSync.reload);
-    gulp.watch("app/**/*.twig").on('change', browserSync.reload);
-    gulp.watch("src/**/*.php").on('change', browserSync.reload);
+    gulp.watch("sass/*.scss",['sass']);
+    gulp.watch("js/*.js").on('change', browserSync.reload);
+    gulp.watch("../app/**/*.twig").on('change', browserSync.reload);
+    gulp.watch("../src/**/*.php").on('change', browserSync.reload);
 });
 
 gulp.task('default', ['browser-sync','watch','sass']);
